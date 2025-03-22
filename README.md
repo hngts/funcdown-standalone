@@ -30,4 +30,4 @@ Without it ? .. nothing new under the sun.
 ```php
   $Funcdown = new \H\scope\Funcdown(5);
 ```
-Variable or Named Constant, there's [official manual](https://hngts.com/?mkp=fncd~manual~encap) for further help.
+Be it Funcdown behind variable or behind Named Constant, there's always [official manual](https://hngts.com/?mkp=fncd~manual~encap) for further help.
