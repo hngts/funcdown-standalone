@@ -12,7 +12,7 @@ In contrast to SR (Standard-Rolling) **Funcdown** version on [official website](
 
 `RUNTIME_CONFIGURATION` class constant can be found at the bottom of the `funcdown.php` file.
 
-## Sample usage
+## Example usage
 Save the contents into desired _`filename.php`_.
 
 `funcdown-standalone.php` if nothing better comes to mind, and:
