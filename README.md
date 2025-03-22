@@ -19,6 +19,7 @@ Save the contents into desired _`filename.php`_.
 `funcdown-standalone.php` if nothing better comes to mind, and:
  
 ```php
+  use \H\scope\Funcdown; // Alias
   require_once 'funcdown-standalone.php';
 ```
 After this point, if autoinstance is turned on, just use it
@@ -29,6 +30,6 @@ After this point, if autoinstance is turned on, just use it
 ```
 Without it ? .. nothing new under the sun.
 ```php
-  $Funcdown = new \H\scope\Funcdown(5);
+  $Funcdown = new Funcdown;
 ```
 Be it Funcdown behind variable or behind Named Constant, there's always [official manual](https://hngts.com/?mkp=fncd~manual) for further help.
