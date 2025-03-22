@@ -3407,9 +3407,6 @@ namespace H\scope {
     public function __destruct() {
       /*:*/ self::TPnanny();
     }
-
-    public const NAMED_FUNCDOWN_GLOBAL = true;
-      /// One Default Instance as Named Constant ?
     
     // Embeded Configuration
     
@@ -3422,6 +3419,9 @@ namespace H\scope {
         ) : []
       );
     }
+
+    public const NAMED_FUNCDOWN_GLOBAL = true;
+      /// One Default Instance as Named Constant ?
     
     private const RUNTIME_CONFIGURATION = ///
     [
