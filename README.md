@@ -1,4 +1,4 @@
-# Funcdown - Advanced Markup Generator
+ho # Funcdown - Advanced Markup Generator
 In contrast to SR (Standard-Rolling) **Funcdown** version on [official website](https://hngts.com/?mkp=fncd~obtain), that consists of class, library and configuration file separatedly, this version has all three of them packed into one fat php file. Thanks to PHP's 'multispace' feature (`namespace NsName {}`) we don't need to mess around with .phar extension any longer. 
 
 ## Structure Difference against Funcdown SR version
@@ -22,7 +22,7 @@ Save the contents into desired _`filename.php`_.
 ```
 After this point, if autoinstance is turned on, just use it
 ```php
-  Funcdown-> parse ('article (. cName) [ h1 {Headline Title}
+  echo Funcdown-> parse ('article (. cName) [ h1 {Headline Title}
     ol [ li {} li {} li {} li {} li {} li {} li {} li {} ]
   ]')-> release();
 ```
