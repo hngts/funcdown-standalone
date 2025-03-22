@@ -3412,7 +3412,7 @@ namespace H\scope {
     
     private static function read_conf (string $K): mixed {
       /// Fetch proper runtime property or else.
-      return ((e ($C, constant ('static::RUNTIME_CONFIGURATION'))) 
+      return ((e ($C, self::RUNTIME_CONFIGURATION))
         ? ((str_contains ($K, ':') && ([$in, $s] = explode (':', $K)))
           ? ($C[$in][$s] ?? ($C[$in] ?? $K)) 
           : ($C[$K] ?? $K)
