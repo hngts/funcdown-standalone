@@ -1,4 +1,4 @@
-<?php /// Funcdown library
+<?php /// Funcdown Standalone ("multispace") variant
 declare (strict_types = 1);
 /*:Licence -> https://hngts.com/?mkp=licence~fncd
   ^: ~ See https://hngts.com/?mkp=fncd~manual for more details.
