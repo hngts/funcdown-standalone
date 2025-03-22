@@ -3431,7 +3431,7 @@ namespace H\scope {
         'attr_expand' => true,
         'enforce_cdata' => true,
         'backend_notgood' => false,
-        'evialuate' => true,
+        'evialuate' => false,
         'avoid_phpxml' => false,
         'tongue_generator' => false,
         //~ '; ^^ Has no usage, not yet implemeneted.
