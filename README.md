@@ -3,7 +3,8 @@ In contrast to [SR (Standard-Rolling) **Funcdown** version from official website
 
 ## Structure Difference against Funcdown SR version
 - Configuration sits inside `RUNTIME_CONFIGURATION` class constant
-- Toggler config values are preffered as literal booleans.   
+- Toggler config values are preffered as literal booleans
+- Trait `ini_config____` is completely removed
   ### Additional Auto-Instancing Option
   - This variant of **Funcdown** has additional `boolean` class constant called `NAMED_FUNCDOWN_GLOBAL`
   - The purpose of this constant is to trigger automatic instance declaration behind named constant `'Funcdown'`
