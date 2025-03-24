@@ -3426,28 +3426,76 @@ namespace H\scope {
     private const RUNTIME_CONFIGURATION = ///
     [
       'toggle' => [
+        //~ Booleans
+    
         'quotes_only' => true,
+          //~ true will wrap each and every attribute value within "".
+          //~ false will wrap attribute values denoted by char, if char is found as first one (unescaped).
+          //~ Toggling to true eases life a lot if you prefer quotes over apostrophes for the argument values - everywhere.
         'tags_expand' => true,
+          //~ true will transform uppercased single or double chars to their real tag names.
+          //~ false will leave tags as they are.
         'attr_expand' => true,
+          //~ true will transform predefined single characters to their real respective attribute names.
+          //~ false will leave attributes as they are.
         'enforce_cdata' => true,
+          //~ true will wrap only style and script - content - with cdata tags (wrapped in block comments) in html mode.
+          //~ In XML mode - every - textnode content will look like this: <url><![CDATA[https://website.com]]></url>
+          //~ false will not utilize cdata anywhere.
         'backend_notgood' => false,
+          //~ If this is set to true, no backend/php code will work. Everything inside PHP tags
+          //~~   with PHP tags as well, will be ignored and wiped/bypassed.
+          //~ Toggling to backend_notgood = true is IDEAL for forum posts and similar,
+          //~~ where provided input values cannot be thrusted, etc.
         'evialuate' => false,
+          //~ If true, all detected php code will be eval()'d directly as string
+          //~ instead of using regular/default buffer captured with `require_once`.
+          //~ note: Ppl say that eval is evil and it is last "sane" option one would use.
         'avoid_phpxml' => false,
+          //~ true will halt/panic if ANY (inside strings as well) real and unescaped
+          //~~  xml tags (with or without `php`) is found anywhere.
+          //~ false means both php/xml and substitutions can be mixed. And so long and
+          //~~  good bye to the BIG portion of process control. :(
+          //~ true is ABSOLUTELY RECOMMENDED for production evironment.
+          //~ Note that backend_notgood = false is THE governor for this option.
         'tongue_generator' => false,
-        //~ '; ^^ Has no usage, not yet implemeneted.
+          //~ Has no usage, not yet implemeneted -- Next LTS version feature
+          //~ Language extractor sub-mechanism. 
+          //~ true is suitable for multilanguage websites/content and will automatically
+          //~~  generate values/files for translations, for each $funcdown-> parse() call.
+          //~ false is not for multilanguage websites, but for some third party library
+          //~~  for that manner if required. Native PHP xmlDOM manipulators, etc.
         'source_squeeze' => false,
+          //~ If true, parser will try to shrink all but - user-text and preformatted
+          //~~  (placeholders and textareas as well) code/text as much as possible
+          //~ false is for markup tidyness competition. :)
         'null_expose' => false,
+          //~ Whether or not to reset funcdown object property values as soon as possible.
+          //~ true is for production environment - will not print debug backtrace
+          //~~  (just message) directly onscreen.
+          //~ false is for development environment.
         'silent_errors' => false,
+          //~ If true, on error, nothing is displayed. That means sudden
+          //~~  `blank screen` === `log file has something to say`.
+          //~ This should remain false for development environment.
         'error_logging' => true,
+          //~ whether to write/append to log file when error ocurs or not.
       ],
       'stall' => [
+        //~ Scalar/Simple
+    
         'ident_eol' => 2,
+          //~ How much spaces to align to the left side of the source code area
         'micro_blacklist' => '',
+          //~ Blacklist for the microdown tags.
         'aid_path' => '',
+          //~ Default path for *.aid.php files.
         'temp_path' => '',
-        //~ ; Default/fallback temporal directory for when php code is inside funcdown.
-        //~ ; Empty value will result in getting system temp dir.
+          //~ Default/fallback temporal wotking directory.
+          //~ Empty value will result in getting system temp dir.
         'tongue_path' => '',
+          //~ Default/fallback language directory for when funcdown is used as language governor as well.
+          //~ Next LTS version feature
       ],
     ];
 
